@@ -1,0 +1,36 @@
+﻿@model List<SingletonExample.Models.Course>
+@{
+    ViewBag.Title = "Courses";
+}
+<div>
+
+<h2>@ViewBag.Title</h2>
+
+</div>
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>Course ID</th>
+                <th>Course Code</th>
+                <th>Course Title</th>
+                <th></th>
+
+            </tr>
+        </thead>
+        @foreach(var i in Model)
+        {
+            <tr>
+                <td>@i.ID</td>
+                <td>@i.Code</td>
+                <td>@i.Title</td>
+                <td>@Html.ActionLink("View Course Details", "CourseDetail", new {  ID = @i.ID} )</td>
+
+            </tr>
+        }
+    </table>
+    
+
+</div>
+
+

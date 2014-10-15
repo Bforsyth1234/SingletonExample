@@ -1,0 +1,17 @@
+﻿@model  SingletonExample.Models.Course
+@{
+    ViewBag.Title = "CourseView";
+}
+
+<h2>CourseView</h2>
+
+<div>
+    <h2>@Model.Title</h2>
+    <h3>@Model.Code</h3>
+    <h4>@Model.ID</h4>
+
+    <p>@Model.Description</p>
+    <button class=" btn">@Html.ActionLink("Add Teacher", "AddTeacher", new {ID = @Model.ID })</button>
+
+
+</div>

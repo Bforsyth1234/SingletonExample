@@ -1,0 +1,25 @@
+﻿@model SingletonExample.Models.AddTeacherVM
+@{
+    ViewBag.Title = "AddTeacher";
+}
+
+<h2>AddTeacher</h2>
+
+
+
+
+<div>
+    <h2>@Model.CourseVM.Title</h2>
+    <h3>@Model.CourseVM.Code</h3>
+    <h4>@Model.CourseVM.ID</h4>
+
+    <p>@Model.CourseVM.Description</p>
+    
+    <select>
+        @foreach(var i in Model.TeacherVM)
+        { 
+            <option value="@i.FirstName">@i.FirstName</option> 
+        }
+    </select>
+
+</div>

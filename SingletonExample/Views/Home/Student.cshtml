@@ -1,0 +1,33 @@
+﻿@model List<SingletonExample.Models.Student>
+@{
+    ViewBag.Title = "Current Student";
+}
+<div align="center">
+
+<h2>@ViewBag.Title.</h2>
+</div>
+<div>
+    <table class="table table-responsive">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>First Last</th>
+                <th>Grade Level</th>
+                <th>ID #</th>
+            </tr>
+        </thead>
+        @foreach(var i in Model)
+        {
+            <tr>
+                <td>@i.FirstName</td>
+                <td>@i.LastName</td>
+                <td>@i.Level</td>
+                <td>@i.ID</td>
+            </tr>
+        }
+
+    </table>
+</div>
+
+
+
